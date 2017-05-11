@@ -135,7 +135,7 @@ body a {
   width: 100%;
   top: 0;
   left: 0;
-  background-image: url("/headerLogo.png");
+  background-image: url("/images/headerLogo.png");
   background-repeat: no-repeat;
   background-position: right; }
   .container .masthead h1 {
