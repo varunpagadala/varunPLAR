@@ -1,0 +1,123 @@
+//main.scss
+//import variables and queries into this file
+@import "_variables.scss";
+@import "_queries.scss";
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    @include border-box;
+}
+
+body {
+    a {
+        color: $primary-link-color;
+    }
+}
+
+.container {
+    .content {
+        padding: 15px 10px 60px;
+        .header {
+            font-family: $serifStack;
+        }
+        .description {
+            font-family: $sansFamily;
+            font-size: 13px;
+            .requirements {
+                padding-left: 20px;
+                font-size: 13px;
+                margin-top: 10px;
+            }
+        }
+        .font-13x {
+            font-size: 13px;
+        }
+        .contact-us-form {
+            label {
+                font-size: 11px;
+            }
+            input,
+            textarea {
+                padding: 3px 5px;
+                border-radius: 3px;
+                border: 1px solid #d3d3d3;
+                margin: 1px 0 5px 0;
+                &:focus {
+                    border-color: #66afe9;
+                    outline: 0;
+                    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+                }
+            }
+            .submit-btn {
+                background-color: rgba(55, 50, 119, .7);
+                color: #fff;
+                font-size: 19px;
+                padding: 5px 20px;
+                border: none;
+                cursor: pointer;
+                outline: none;
+                border-radius: 4px;
+                &:hover {
+                    background-color: $primary-color-dark;
+                }
+            }
+        }
+        .contact-location-map {
+            padding: 0 40px;
+        }
+    }
+    .vertical-margin {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .serif-font {
+        @extend %serifFamily;
+    }
+    .sans-font {
+        @extend %sansFamily;
+    }
+    .masthead {
+        background-color: $primary-color-dark;
+        color: $primary-color-text;
+        padding: 15px 20px;
+        @extend %serifFamily;
+        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .33);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-image: url('/headerLogo.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        h1 {
+            font-size: 20px;
+            font-weight: normal;
+        }
+    }
+    .mainnav {
+        margin-top: 65px;
+        .mainmenu {
+            font-family: $sansFamily;
+            li {
+                display: inline;
+                padding: 0 10px;
+            }
+        }
+    }
+    footer {
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        text-align: center;
+        font-size: 11px;
+        padding: 10px;
+        background-color: #9E9E9E;
+        color: #FFFFFF;
+        @extend %sansFamily;
+    }
+}

@@ -1,0 +1,89 @@
+// _queries.scss - media queries go here
+//media queries over 1600px
+.row {
+    @extend %clearfix;
+    .col {
+        display: inline-block;
+        float: left;
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+
+.container {
+    @media #{$breakpoint-small} {
+        .masthead {
+            h1 {
+                font-size: 18px !important;
+            }
+        }
+        .mainnav {
+            width: 100%;
+            .mainmenu {
+                li {
+                    display: list-item !important;
+                    text-align: center;
+                    margin: 5px;
+                }
+            }
+        }
+        .content {
+            .col {
+                width: 100%;
+                margin-top: 2px;
+                margin-bottom: 2px;
+            }
+        }
+    }
+    @media screen and (max-width: 1000px) and (min-width: 600px) {
+        width: 90%;
+        margin: 0 auto;
+        .mainnav {
+            width: 100%;
+            .mainmenu {
+                text-align: center;
+                li {
+                    display: inline;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    @media #{$breakpoint-medium} {
+        width: 990px;
+        float: left;
+        padding-left: 10px;
+        .mainnav {
+            width: 100%;
+            li {
+                text-align: left;
+            }
+        }
+        .content {
+            .col {
+                &:nth-child(1),
+                &:nth-child(2) {
+                    width: 25%;
+                }
+                &:nth-child(3) {
+                    width: 50%;
+                }
+            }
+        }
+    }
+    @media #{$breakpoint-large} {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 2000px;
+        .mainnav {
+            width: 20%;
+            .mainmenu {
+                li {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+//end of 1600px queries

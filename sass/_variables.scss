@@ -1,0 +1,45 @@
+// _variables.scss
+%clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+$grid-columns: 12;
+$grid-max-width: 100%;
+// breakpoints
+$breakpoint-small: "only screen and (max-width: 600px)";
+$breakpoint-medium: "only screen and (min-width: 1001px) and (max-width: 1600px)";
+$breakpoint-large: "only screen and (min-width: 1601px)";
+//color scheme
+$primary-color-dark: #373277;
+$primary-color: rgba(55, 50, 119, .7);
+$primary-color-light: #AFADC8;
+$primary-color-text: #FFFFFF;
+$accent-color: #E3E3E3;
+$primary-text-color: #FFFFFF;
+$primary-link-color: #0072BE;
+//fonts 
+$serifStack: 'Slabo 27px',
+serif;
+$sansFamily: 'Roboto',
+sans-serif;
+%serifFamily {
+    font-family: $serifStack;
+}
+
+%sansFamily {
+    font-family: $sansFamily;
+}
